@@ -15,19 +15,19 @@ public class Main {
 		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("http://127.0.0.1:5500/index.html");
+		driver.get("http://127.0.0.1:5500/html/index.html");
 		
-//		WebElement courseElement = driver.findElement(By.xpath("//course"));
+		WebElement courseElement = driver.findElement(By.xpath("*"));
 //		WebElement textElement = courseElement.findElement(By.xpath("//input[@type='text1']"));
-//		textElement.click();
-//		textElement.sendKeys("...");
+		courseElement.click();
+		courseElement.sendKeys("...");
 //		
-		List<WebElement> courseElements = driver.findElements(By.xpath("//course"));
+//		List<WebElement> courseElements = driver.findElements(By.xpath("//course"));
 //		for(WebElement courseElement : courseElements) {
 //			System.out.println(courseElement.getText());
 //		}
-		WebElement cloudCourseElement = courseElements.get(2);
-		System.out.println(cloudCourseElement.getText());
+//		WebElement cloudCourseElement = courseElements.get(2);
+//		System.out.println(cloudCourseElement.getText());
 	}
 
 }
