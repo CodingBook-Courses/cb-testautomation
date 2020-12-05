@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <title>Coding Book 1</title>
 </head>
+
 <body>
-    <organization>
-        <div>Coding Book</div>
-        <courses>
-            <course  class="course">
-                <info>
-                    <name>Java .. course</name>
-                </info>
-                <ide>IntelliJ</ide>
-                <ide>Eclipse</ide>
-            </course>
-            <course class="course">
-                <info>
-                    <name >Java2 .. course</name>
-                </info>
-                <ide>IntelliJ</ide>
-                <ide>Eclipse</ide>
-            </course>
-           
-    </organization>
+
+    <h2>Dropdowns</h2>
+
+    <label for="cars">Choose a car:</label>
+
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <br>
+    <div id="container"></div>
+    <br>
+    <div>
+      <button id="generate">Generate</button>
+    </div>
+
+
+    <hr>
+
+    <h2>Check Boxes</h2>
+
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+
+
+    <hr>
+
+    <h2>Radio Buttons</h2>
+
+    <form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </form>
+
+
+    <h2>Alert</h2>
+    <button onclick="myFunction()">Try it</button>
+
     
+    <script>
+        document.getElementById('generate').onclick = function () {
+
+            var values = ["dog", "cat", "parrot", "rabbit"];
+
+            var select = document.createElement("select");
+            select.name = "pets";
+            select.id = "pets"
+
+            for (const val of values) {
+                var option = document.createElement("option");
+                option.value = val;
+                option.text = val.charAt(0).toUpperCase() + val.slice(1);
+                select.appendChild(option);
+            }
+
+            var label = document.createElement("label");
+            label.innerHTML = "Choose your pets: "
+            label.htmlFor = "pets";
+
+            document.getElementById("container").appendChild(label).appendChild(select);
+        }
+        function myFunction() {
+            alert("Hello! I am an alert box!");
+        }
+    </script>
 </body>
+
 </html>
