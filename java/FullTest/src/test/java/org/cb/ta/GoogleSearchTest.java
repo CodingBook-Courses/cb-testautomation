@@ -1,32 +1,40 @@
 package org.cb.ta;
 
 
-import static org.junit.Assert.assertEquals;
 
-import org.openqa.selenium.By;
+
+import jdk.jfr.Enabled;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.google.inject.Key;
+import static org.testng.Assert.assertEquals;
 
+//@Test(enabled = false)
 public class GoogleSearchTest extends BaseTest {
-	
+
+	private GoogleSearchMainPage googleSearchMainPage;
+
+	public GoogleSearchTest() {
+		super(new GoogleSearchMainPage(driver));
+		googleSearchMainPage = (GoogleSearchMainPage) basePage;
+	}
+
+
 	@Test
 	public void gotoGoogleAndEnterSearchText() throws InterruptedException {
-		
-		GoogleSearchMainPage googleSearchMainPage = new GoogleSearchMainPage(driver);
-		googleSearchMainPage.go();
+
+		basePage.go();
 		WebElement searchTextField = googleSearchMainPage.getSearchText();
 		searchTextField.sendKeys("codingbook");
 		searchTextField.sendKeys(Keys.RETURN);
-		
+
+		Thread.sleep(1000);
+
     	//test
 		System.out.println("******" + searchTextField.getAttribute("value"));
-    	assertEquals("Invalid text in search field", 
-    			"codingbook", 
+    	assertEquals("Invalid text in search field",
+    			"codingbook",
     			searchTextField.getAttribute("value"));
 	}
 }
