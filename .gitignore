@@ -62,4 +62,5 @@ debug.log
 /**/target
 java/FullTest/.classpath
 java/FullTest/.idea
-java/FullTest/target
+java/FullTest/target/*
+java/FullTest/target/*.iml
