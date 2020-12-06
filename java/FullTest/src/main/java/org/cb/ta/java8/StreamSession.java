@@ -1,4 +1,4 @@
-package org.cb.ta;
+package org.cb.ta.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;

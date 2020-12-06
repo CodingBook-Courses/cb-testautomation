@@ -1,7 +1,4 @@
-package org.cb.ta;
-
-import java.util.concurrent.Callable;
-import java.util.function.Consumer;
+package org.cb.ta.java8;
 
 public class Lambda {
 	@FunctionalInterface
