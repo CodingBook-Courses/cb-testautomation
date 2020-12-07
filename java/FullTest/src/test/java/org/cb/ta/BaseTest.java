@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.*;
 
-public class BaseTest {
+public abstract class BaseTest {
 
 	protected static WebDriver driver;
 
@@ -18,5 +18,10 @@ public class BaseTest {
 
 	public BaseTest(BasePage basePage) {
 		this.basePage = basePage;
+	}
+
+	@AfterSuite
+	public void tearDown() {
+		driver.quit();
 	}
 }

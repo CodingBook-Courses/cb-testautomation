@@ -1,8 +1,8 @@
 package org.cb.ta;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-@Test(enabled = false)
 public class CheapFlightsMainPageTest extends BaseTest {
 
     private CheapFlightsMainPage cheapFlightsMainPage;
