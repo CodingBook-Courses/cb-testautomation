@@ -13,11 +13,11 @@ public class GoogleSearchMainPage extends BasePage {
 	private WebElement searchElement; 
 	
 	public GoogleSearchMainPage(WebDriver driver) {
-		super(driver);
+		super(driver, "http://www.google.com");
 	}
 
 	public void go() {
-		driver.get("http://www.google.com");
+		driver.get(webAddress);
 	}
 
 	

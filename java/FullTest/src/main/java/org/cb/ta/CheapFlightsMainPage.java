@@ -11,11 +11,11 @@ public class CheapFlightsMainPage extends BasePage {
 
 	
 	public CheapFlightsMainPage(WebDriver driver) {
-		super(driver);
+		super(driver, "https://www.cheapflights.com/");
 	}
 	
 	public void go() {
-		driver.get("https://www.cheapflights.com/");
+		driver.get(webAddress);
 	}
 
 	public WebElement getRoundTripElement() {
