@@ -1,16 +1,13 @@
 package org.cb.ta;
 
 
-
-
-import jdk.jfr.Enabled;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-//@Test(enabled = false)
+@Test(enabled = false)
 public class GoogleSearchTest extends BaseTest {
 
 	private GoogleSearchMainPage googleSearchMainPage;
@@ -32,9 +29,7 @@ public class GoogleSearchTest extends BaseTest {
 		Thread.sleep(1000);
 
     	//test
-		System.out.println("******" + searchTextField.getAttribute("value"));
-    	assertEquals("Invalid text in search field",
-    			"codingbook",
-    			searchTextField.getAttribute("value"));
+    	assertEquals(searchTextField.getAttribute("value"),
+    			"codingbook", "Invalid search test");
 	}
 }
