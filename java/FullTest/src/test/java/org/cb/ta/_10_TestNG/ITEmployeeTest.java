@@ -14,7 +14,7 @@ public class ITEmployeeTest {
         System.out.println("beforeMethod");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void ITEmployeeTest() {
         System.out.println("ITEmployeeTest");
     }

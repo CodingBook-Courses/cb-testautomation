@@ -14,17 +14,18 @@ public class ManagementEmployeeTest {
         System.out.println("beforeTest");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void managementEmployeeTest() {
         System.out.println("managementEmployeeTest");
     }
 
-    @Test
+    @Test(groups = {"Smoke", "Regression"})
     public void firstnameTest() {
         System.out.println("firstnameTest");
     }
 
-    @Test
+
+    @Test(groups = {"Regression"})
     public void surnameTest() {
         System.out.println("surnameTest");
     }
