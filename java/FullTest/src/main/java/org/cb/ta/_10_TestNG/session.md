@@ -13,6 +13,7 @@
 11. @AfterTest annotation
 12. @BeforeSuite and @AfterSuite annotations
 13. @BeforeClass and @AfterClass annotations
+14. @BeforeMethod and @AfterMethod annotations
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
