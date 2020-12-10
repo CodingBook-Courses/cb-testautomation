@@ -21,7 +21,7 @@ public class ExerciseMainPageTest extends BaseTest {
     }
 
 
-    @Given("^Browser is in the home page?")
+    @Given("Browser is in the home page")
     public void browserIsInTheHomePage() {
         exerciseMainPage.go();
         Boolean navigated = (new WebDriverWait(driver, 3l))
