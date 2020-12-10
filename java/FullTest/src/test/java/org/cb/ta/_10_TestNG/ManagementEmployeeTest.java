@@ -10,6 +10,11 @@ public class ManagementEmployeeTest {
     }
 
     @Test
+    public void firstnameTest() {
+        System.out.println("firstnameTest");
+    }
+
+    @Test
     public void surnameTest() {
         System.out.println("surnameTest");
     }

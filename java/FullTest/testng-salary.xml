@@ -1,6 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Salary Tests" >
+    <test name="Employee Info" >
+        <classes>
+            <class name="org.cb.ta._10_TestNG.ManagementEmployeeTest">
+                <methods>
+                    <include name="firstnameTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
     <test name="Employee Salaries" >
         <classes>
             <class name="org.cb.ta._10_TestNG.EmployeeSalaryTest" />

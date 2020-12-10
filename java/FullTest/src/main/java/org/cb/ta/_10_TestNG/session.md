@@ -7,6 +7,7 @@
    - suite -> test > class/..
 6. Multiple xml configuration files
 7. Exclude keyword
+8. Include keyword
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
