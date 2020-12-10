@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="HR DepartmentTests" verbose="1" >
+    <test name="EmployeeNames" >
+        <classes>
+            <class name="org.cb.ta._10_TestNG.ManagementEmployeeTest" />
+            <class name="org.cb.ta._10_TestNG.ITEmployeeTest" />
+        </classes>
+    </test>
+</suite>
