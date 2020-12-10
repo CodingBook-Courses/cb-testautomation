@@ -1,6 +1,5 @@
 package org.cb.ta;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class CheapFlightsMainPageTest extends BaseTest {
@@ -8,8 +7,7 @@ public class CheapFlightsMainPageTest extends BaseTest {
     private CheapFlightsMainPage cheapFlightsMainPage;
 
     public CheapFlightsMainPageTest() {
-        super(new CheapFlightsMainPage(driver));
-        cheapFlightsMainPage = (CheapFlightsMainPage) basePage;
+        cheapFlightsMainPage = new CheapFlightsMainPage(driver);
     }
 
 

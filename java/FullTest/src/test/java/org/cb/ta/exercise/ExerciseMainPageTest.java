@@ -20,8 +20,7 @@ public class ExerciseMainPageTest extends BaseTest {
     private ExerciseMainPage exerciseMainPage;
 
     public ExerciseMainPageTest() {
-        super(new ExerciseMainPage(driver));
-        exerciseMainPage = (ExerciseMainPage) basePage;
+        exerciseMainPage = new ExerciseMainPage(driver);
     }
 
 
