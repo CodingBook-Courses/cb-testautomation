@@ -13,7 +13,7 @@ public class CheapFlightsMainPageTest extends BaseTest {
     }
 
 
-    @Test
+    @Test(enabled = false)
     public void testRoundTripElementSpan() {
         cheapFlightsMainPage.go();
         cheapFlightsMainPage.getRoundTripElement().click();

@@ -19,7 +19,7 @@ public class GoogleSearchTest extends BaseTest {
 	}
 
 
-	@Test
+	@Test(enabled = false)
 	public void gotoGoogleAndEnterSearchText() throws InterruptedException {
 
 		basePage.go();
