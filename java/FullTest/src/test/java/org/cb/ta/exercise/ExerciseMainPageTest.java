@@ -4,14 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.cb.ta.BaseTest;
-import org.cb.ta.exercise.ExerciseMainPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
@@ -34,17 +29,16 @@ public class ExerciseMainPageTest extends BaseTest {
         assertTrue(navigated);
     }
 
-    @When("^Dropdown link is clicked?")
-    public void dropdownLinkIsClicked() {
-        WebElement webElement = exerciseMainPage.getDropDownLink();
+    @When("{string} link is clicked")
+    public void dropdownLinkIsClicked(String relativeLink) {
+        WebElement webElement = exerciseMainPage.getLinkElement(relativeLink);
         webElement.click();
     }
 
-    @Then("^Dropdown exercise page is loaded?")
-    public void dropdownExercisePageIsLoaded() {
+    @Then("{string} exercise page is loaded")
+    public void exercisePageIsLoaded(String relativeLink) {
         Boolean navigated = (new WebDriverWait(driver, 3l))
-                .until(ExpectedConditions.urlMatches("https://the-internet.herokuapp.com/dropdown"));
+                .until(ExpectedConditions.urlMatches(exerciseMainPage.constructLink(relativeLink)));
         assertTrue(navigated);
     }
-
 }
