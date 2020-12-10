@@ -16,11 +16,21 @@ public class TestNGExample extends BaseTest {
         exerciseMainPage = new ExerciseMainPage(driver);
     }
 
-    @Test
+    @Test(enabled = false)
     public void gotoMainPage() {
         exerciseMainPage.go();
         Boolean navigated = (new WebDriverWait(driver, 3l))
                 .until(ExpectedConditions.urlMatches(exerciseMainPage.getWebAddress()));
         assertTrue(navigated);
+    }
+
+    @Test
+    public void login() {
+        System.out.println("Login");
+    }
+
+    @Test(dependsOnMethods = {"login"})
+    public void doShopping() {
+        System.out.println("doShoping");
     }
 }

@@ -25,5 +25,7 @@
       
 Using groups variable @Test(groups={"Smoke", "Regression"})
 
+16. Defining dependencies (@Test(dependsOnMethods = {"login"}))
+
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
