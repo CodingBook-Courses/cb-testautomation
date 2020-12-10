@@ -8,6 +8,7 @@
 6. Multiple xml configuration files
 7. Exclude keyword
 8. Include keyword
+9. Using packages in a test group in xml configuration
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
