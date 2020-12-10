@@ -1,7 +1,10 @@
 Feature: Navigate to dropdown page
 
-  Scenario Outline: Navigate to an exercise element
+#  Background is like Before hook in TestNG. It is called before each scenarios
+  Background:
     Given Browser is in the home page
+
+  Scenario Outline: Navigate to an exercise element
     Then A number is selected
     |number|
     |1     |
