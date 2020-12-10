@@ -11,7 +11,8 @@
 9. Using packages in a test group in xml configuration
 10. @BeforeTest annotation
 11. @AfterTest annotation
-12. @BeforeSuite annotation and @AfterSuite annotation
+12. @BeforeSuite and @AfterSuite annotations
+13. @BeforeClass and @AfterClass annotations
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
