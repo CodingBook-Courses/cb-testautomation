@@ -8,4 +8,9 @@ public class ManagementEmployeeTest {
     public void managementEmployeeTest() {
         System.out.println("managementEmployeeTest");
     }
+
+    @Test
+    public void surnameTest() {
+        System.out.println("surnameTest");
+    }
 }

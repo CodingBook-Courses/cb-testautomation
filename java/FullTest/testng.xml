@@ -3,7 +3,11 @@
 <suite name="HR DepartmentTests" verbose="1" >
     <test name="EmployeeNames" >
         <classes>
-            <class name="org.cb.ta._10_TestNG.ManagementEmployeeTest" />
+            <class name="org.cb.ta._10_TestNG.ManagementEmployeeTest">
+                <methods>
+                    <exclude name="surnameTest"></exclude>
+                </methods>
+            </class>
             <class name="org.cb.ta._10_TestNG.ITEmployeeTest" />
         </classes>
     </test>
