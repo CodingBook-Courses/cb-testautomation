@@ -5,18 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 public class DropDownPageTest extends BaseTest {
 
     private DropDownPage dropDownPage;
 
     public DropDownPageTest() {
-        super(new DropDownPage(driver));
-        dropDownPage = (DropDownPage) basePage;
+        dropDownPage = new DropDownPage(driver);
     }
 
     @Test(priority = 1)
