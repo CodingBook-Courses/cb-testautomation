@@ -9,6 +9,7 @@
 7. Exclude keyword
 8. Include keyword
 9. Using packages in a test group in xml configuration
+10. @BeforeTest annotation
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
