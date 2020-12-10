@@ -1,11 +1,14 @@
 package org.cb.ta._10_TestNG;
 
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class ManagementEmployeeTest {
+    @BeforeSuite
+    public void setup() {
+        System.out.println("setup");
+    }
+
     @BeforeTest
     public void beforeTest() {
         System.out.println("beforeTest");
@@ -29,5 +32,10 @@ public class ManagementEmployeeTest {
     @AfterTest
     public void afterTest() {
         System.out.println("afterTest");
+    }
+
+    @AfterSuite
+    public void teardown() {
+        System.out.println("teardown");
     }
 }
