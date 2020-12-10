@@ -10,6 +10,7 @@
 8. Include keyword
 9. Using packages in a test group in xml configuration
 10. @BeforeTest annotation
+11. @AfterTest annotation
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
