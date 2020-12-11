@@ -2,7 +2,9 @@
 
 <suite name="HR DepartmentTests" verbose="1" >
 
+    <parameter name="url" value="www.codingbook.org"></parameter>
     <test name="Management" >
+        <parameter name="url" value="www.codingbook.org111"></parameter>
         <classes>
             <class name="org.cb.ta._10_TestNG.TestNGExample">
             </class>
@@ -10,7 +12,7 @@
     </test>
 
     <test name="Salary" >
-        <parameter name="url" value="www.codingbook.org"></parameter>
+        <parameter name="url" value="www.codingbook.org222"></parameter>
         <classes>
             <class name="org.cb.ta._10_TestNG.EmployeeSalaryTest">
             </class>
