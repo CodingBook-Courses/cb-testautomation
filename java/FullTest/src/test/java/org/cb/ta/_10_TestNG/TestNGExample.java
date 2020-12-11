@@ -4,6 +4,7 @@ import org.cb.ta.BaseTest;
 import org.cb.ta.exercise.ExerciseMainPage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -24,19 +25,25 @@ public class TestNGExample extends BaseTest {
         assertTrue(navigated);
     }
 
-    @Test
+    @Test(enabled = false)
     public void login() {
         System.out.println("Login");
     }
 
-    @Test(dependsOnMethods = {"login"})
+    @Test(dependsOnMethods = {"login"}, enabled = false)
     public void doShopping() {
         System.out.println("doShoping");
     }
 
-    @Test(timeOut = 4000)
+    @Test(timeOut = 4000, enabled = false)
     public void longTest() throws InterruptedException {
         Thread.sleep(5000);
         System.out.println("doShoping");
+    }
+
+    @Parameters({"url"})
+    @Test
+    public void parameterTest(String anUrl) {
+        System.out.println(anUrl);
     }
 }

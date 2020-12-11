@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="HR DepartmentTests" verbose="1" >
+    <parameter name="url" value="www.codingbook.org"></parameter>
+    <test name="Management" >
+        <classes>
+            <class name="org.cb.ta._10_TestNG.TestNGExample">
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -27,6 +27,7 @@ Using groups variable @Test(groups={"Smoke", "Regression"})
 
 16. Defining dependencies (@Test(dependsOnMethods = {"login"}))
 17. Defining timeout (@Test(timeOut = 4000))) in milliseconds
+18. Defining suite scoped parameter
 
 ### NOTES 
 - If you do not define an order, test cases are ordered alphabetically 
