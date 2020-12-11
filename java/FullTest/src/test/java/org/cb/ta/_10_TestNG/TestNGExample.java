@@ -33,4 +33,10 @@ public class TestNGExample extends BaseTest {
     public void doShopping() {
         System.out.println("doShoping");
     }
+
+    @Test(timeOut = 4000)
+    public void longTest() throws InterruptedException {
+        Thread.sleep(5000);
+        System.out.println("doShoping");
+    }
 }
